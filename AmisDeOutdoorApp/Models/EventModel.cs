@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AmisDeOutdoorApp.Models
 {
-    internal class Equipment
+    internal class EventModel
     {
     }
 }
