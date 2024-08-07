@@ -7,6 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+
+        <!-- Structure -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu Nav -->
+        <Grid Grid.Row="0" Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"/>
+
+            <Button Grid.Column="1" Content="Calendar button" Width="100" Height="40" Margin="5"/>
+            <Button Grid.Column="2" Content="Daily button" Width="100" Height="40" Margin="5"/>
+            <Button Grid.Column="3" Content="Equipment button" Width="100" Height="40" Margin="5"/>
+
+            <TextBlock Grid.Column="4"/>
+        </Grid>
+
+        <!-- Weather API -->
+        <Grid Grid.Row="1" Name="Meteo" Background="LightBlue">
+            <TextBlock Text="Weather Information" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
         
+        <!-- The Event Grid -->
+        <Grid Grid.Row="2" Background="LightBlue">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Margin="10"/>
+            <StackPanel Margin="10" VerticalAlignment="Center">
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" Margin="5">
+                    <TextBlock Text="Event of day goes here" Padding="10"/>
+                </Border>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" Margin="5">
+                    <TextBlock Text="Event of day goes here" Padding="10"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>
