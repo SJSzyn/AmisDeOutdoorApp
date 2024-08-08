@@ -10,7 +10,7 @@
         <converters:TemperatureToDescriptionConverter x:Key="TemperatureToDescriptionConverter" />
     </UserControl.Resources>
 
-    <Grid Background="LightBlue">
+    <Grid Background="#ffffff">
         <TextBlock Text="Informations Météo" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="{Binding ClosestWeatherData.Time, StringFormat='Date et Heure : {0:dd/MM/yyyy HH:mm}'}" FontSize="16"/>

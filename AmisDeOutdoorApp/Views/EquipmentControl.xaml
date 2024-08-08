@@ -5,8 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="400">
-    <Grid Background="LightBlue">
-        <ListBox ItemsSource="{Binding EquipmentList}" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid Background="#ffffff">
+        <ListBox ItemsSource="{Binding EquipmentList}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                 Background="Transparent" BorderThickness="0">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>

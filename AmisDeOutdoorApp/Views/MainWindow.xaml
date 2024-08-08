@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <!-- Menu Nav -->
-        <Grid Grid.Row="0" Background="LightBlue">
+        <Grid Grid.Row="0" Background="#ffffff">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
