@@ -59,7 +59,26 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\TemperatureToDescriptionConverter.cs" />
+    <Compile Include="ViewModels\CalendarViewModel.cs" />
+    <Compile Include="ViewModels\EquipmentViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\CalendarControl.xaml.cs">
+      <DependentUpon>CalendarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EquipmentControl.xaml.cs">
+      <DependentUpon>EquipmentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeatherControl.xaml.cs">
+      <DependentUpon>WeatherControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\CalendarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EquipmentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +92,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\WeatherControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\EquipmentModel.cs" />
