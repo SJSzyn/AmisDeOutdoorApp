@@ -19,15 +19,15 @@ namespace AmisDeOutdoorApp.Converters
 
                 if (nebulosity <= 0)
                 {
-                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sun_symbol_%28bold%29.svg/1024px-Sun_symbol_%28bold%29.svg.png";
+                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/d/df/RP_logo_variation.png";
                 }
                 else if (nebulosity > 0 && nebulosity <= 50)
                 {
-                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sun_symbol_%28bold%29.svg/1024px-Sun_symbol_%28bold%29.svg.png";
+                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Antu_weather-clouds.svg/480px-Antu_weather-clouds.svg.png";
                 }
                 else
                 {
-                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sun_symbol_%28bold%29.svg/1024px-Sun_symbol_%28bold%29.svg.png";
+                    imagePath = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Weather-violent-storm.svg/480px-Weather-violent-storm.svg.png";
                 }
 
                 return new BitmapImage(new Uri(imagePath));
