@@ -52,16 +52,16 @@
                         <Setter Property="FontSize" Value="19"/>
                     </Style>
                 </ListView.Resources>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Icon" Width="50">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Emoji}" TextAlignment="Center"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="Day" DisplayMemberBinding="{Binding Day}" Width="120"/>
+                        <GridViewColumn Header="Icon" DisplayMemberBinding="{Binding Emoji}" Width="50"/>
+                        <GridViewColumn Header="Day" DisplayMemberBinding="{Binding Day}" Width="120" />
+                        <GridViewColumn Header="Hour" DisplayMemberBinding="{Binding Hour}" Width="120"/>
                         <GridViewColumn Header="Temperature (°C)" DisplayMemberBinding="{Binding Temp}" Width="100"/>
                         <GridViewColumn Header="Humidity (%)" DisplayMemberBinding="{Binding Humidity}" Width="100"/>
                         <GridViewColumn Header="Pressure (HPa)" DisplayMemberBinding="{Binding Pressure}" Width="100"/>
