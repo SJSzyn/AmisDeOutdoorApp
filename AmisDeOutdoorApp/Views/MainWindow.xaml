@@ -9,7 +9,7 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.DataContext>
-        <viewModels:WeatherViewModel />
+        <viewModels:MainViewModel />
     </Window.DataContext>
 
     <Grid>
@@ -18,11 +18,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
 
         <!-- Menu Nav -->
-        <Grid Grid.Row="0" Background="LightBlue">
+        <Grid Grid.Row="0" Background="#ffffff">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
@@ -33,37 +32,14 @@
 
             <TextBlock Grid.Column="0"/>
 
-            <Button Grid.Column="1" Content="Calendar button" Width="100" Height="40" Margin="5"/>
-            <Button Grid.Column="2" Content="Daily button" Width="100" Height="40" Margin="5"/>
-            <Button Grid.Column="3" Content="Equipment button" Width="100" Height="40" Margin="5"/>
+            <Button Grid.Column="1" Content="Calendar" Width="100" Height="40" Margin="5" Command="{Binding ShowCalendarViewCommand}"/>
+            <Button Grid.Column="2" Content="Daily" Width="100" Height="40" Margin="5" Command="{Binding ShowWeatherViewCommand}"/>
+            <Button Grid.Column="3" Content="Equipment" Width="100" Height="40" Margin="5" Command="{Binding ShowEquipmentViewCommand}"/>
 
             <TextBlock Grid.Column="4"/>
         </Grid>
 
-        <!-- Weather API -->
-        <Grid Grid.Row="1" Name="Meteo" Background="LightBlue">
-            <TextBlock Text="Informations Météo" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{Binding ClosestWeatherData.Time, StringFormat='Date et Heure : {0:dd/MM/yyyy HH:mm}'}" FontSize="16"/>
-                <TextBlock Text="{Binding ClosestWeatherData.Temperature, StringFormat='Température : {0:F0} °C'}" FontSize="16"/>
-                <TextBlock Text="{Binding ClosestWeatherData.Humidity, StringFormat='Humidité : {0:F0} %'}" FontSize="16"/>
-                <TextBlock Text="{Binding ClosestWeatherData.Precipitation, StringFormat='Précipitation : {0:F1} mm'}" FontSize="16"/>
-                <TextBlock Text="{Binding ClosestWeatherData.Wind, StringFormat='Vent : {0:F0} m/s'}" FontSize="16"/>
-            </StackPanel>
-        </Grid>
-
-        <!-- The Event Grid -->
-        <Grid Grid.Row="2" Background="LightBlue">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Margin="10"/>
-            <StackPanel Margin="10" VerticalAlignment="Center">
-                <Border Background="White" BorderBrush="Black" BorderThickness="1" Margin="5">
-                    <TextBlock Text="Event of day goes here" Padding="10"/>
-                </Border>
-                <Border Background="White" BorderBrush="Black" BorderThickness="1" Margin="5">
-                    <TextBlock Text="Event of day goes here" Padding="10"/>
-                </Border>
-            </StackPanel>
-        </Grid>
-
+        <!-- Content Control to switch views -->
+        <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
     </Grid>
 </Window>

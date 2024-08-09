@@ -12,6 +12,7 @@ namespace AmisDeOutdoorApp.Models
         private double humidity;
         private double precipitation;
         private double wind;
+        private double nebulosity;
 
         /// <summary>
         /// Gets or sets the time of the weather data.
@@ -80,6 +81,20 @@ namespace AmisDeOutdoorApp.Models
                 if (value < 0)
                     throw new ArgumentOutOfRangeException(nameof(value), "Wind speed cannot be negative.");
                 wind = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the nebulosity.
+        /// </summary>
+        public double Nebulosity
+        {
+            get { return nebulosity; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException(nameof(value), "Nebulosity cannot be negative.");
+                nebulosity = value;
             }
         }
     }
