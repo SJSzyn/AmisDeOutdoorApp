@@ -79,7 +79,8 @@ namespace AmisDeOutdoorApp.ViewModels
                             Temperature = ConvertKelvinToCelsius((double)closestData["temperature"]["sol"]),
                             Humidity = (double)closestData["humidite"]["2m"],
                             Precipitation = (double)closestData["pluie"],
-                            Wind = (double)closestData["vent_moyen"]["10m"]
+                            Wind = (double)closestData["vent_moyen"]["10m"],
+                            Nebulosity = (double)closestData["nebulosite"]["totale"]
                         };
                     }
                     else

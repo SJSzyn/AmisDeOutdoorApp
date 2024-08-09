@@ -40,6 +40,6 @@
         </Grid>
 
         <!-- Content Control to switch views -->
-        <ContentControl Grid.Row="1" Content="{Binding CurrentView}" Background="LightBlue"/>
+        <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
     </Grid>
 </Window>
